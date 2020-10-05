@@ -40,7 +40,7 @@
           <li><a href="" title="">02 : Works</a></li>
           <li><a href="../about" title="">03 : About me</a></li>
           <li><a href="../contact" title="">04 : Contact</a></li>
-          <li><a href="{% static 'base/sample.pdf' %}" target="_blank" rel="noopener noreferrer" title="">05 : Resume</a></li>
+          <li><a href="{% static 'base/Resume.pdf' %}" target="_blank" rel="noopener noreferrer" title="">05 : Resume</a></li>
         </ul>
 
 
@@ -56,7 +56,7 @@
       <div class="col-sm-8 col-sm-offset-2 section-container-spacer">
         <div class="text-center">
           <h1 class="h2">02 : Works</h1>
-          <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies, nisl nunc pulvinar ligula, id sodales arcu sapien in nisi. Quisque libero enim, mattis non augue posuere, venenatis dapibus urna.</p>
+          <p>Below you can find some of my works. Feel free to contact me ragarding any feedback or suggestions</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@
                     {% endif %}
 
                     <div class="col-sm-4">
-                      <a href="" title="" class="black-image-project-hover">
+                      <a href="{% url 'works:work' work.id %}" title="" class="black-image-project-hover">
                         <img src="{{ work.imagesrc.url }}" alt="" class="img-responsive">
                       </a>
                       <div class="card-container card-container-lg">
